@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    meta(charset = "UTF-8")
+    title ユーザー登録
+  body
+    h1 ユーザー登録
+    form(action = "/signup" method = "post")
+      p
+        input(type = "email", name = "email")
+      p
+        input(type = "password", name = "password")
+      p
+        input(type = "submit", value = "登録")
