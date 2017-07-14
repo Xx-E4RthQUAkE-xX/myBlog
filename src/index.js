@@ -2,7 +2,7 @@ let express = require('express')
 let app = express()
 
 app.get('/', function(req, res) {
-    res.send('Hello World!')
+    res.redirect(302, '/name');
 });
 
 app.get("/name", function(req, res) {
