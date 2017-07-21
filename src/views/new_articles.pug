@@ -10,8 +10,8 @@ block content
     
   form(action = "/articles" method = "post")
     .form-group
-      input(type = "text", name = "title")
+      input.form-control(type = "text", name = "title")
     .form-group
-      textarea(name = "body" form = 10)
+      textarea.form-control(name = "body" rows = "10")
     .form-group
       input.btn.btn-primary.btn-block(type = "submit", value = "作成")
