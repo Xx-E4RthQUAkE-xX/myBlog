@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    meta(charset = "UTF-8")
+    title Login
+    link(link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css")
+  body
+    h1 ログイン
+    form(action = "/login" method = "post")
+      p
+        input(type = "email", name = "email")
+      p
+        input(type = "password", name = "password")
+      p
+        input.button.button3(type = "submit", value = "ログイン")

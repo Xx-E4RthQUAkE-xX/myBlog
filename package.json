@@ -12,7 +12,9 @@
   "author": "_UseK",
   "license": "MIT",
   "dependencies": {
+    "cookie-parser": "^1.4.3",
     "express": "^4.15.3",
+    "morgan": "^1.8.2",
     "mysql": "^2.13.0",
     "pug": "^2.0.0-rc.2"
   }

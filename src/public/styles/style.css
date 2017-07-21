@@ -1,0 +1,15 @@
+body {
+    font-size: 40px;
+    background: lightgray;
+    width: 854px;
+    height: 480px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #555;
+}
+
+form {
+    background: white;
+}
+
+h1 {}
