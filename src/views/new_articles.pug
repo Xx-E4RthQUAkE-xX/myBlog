@@ -1,14 +1,17 @@
-doctype html
-html
-  head
-    meta(charset = "UTF-8")
+extends layout.pug
+
+block head
     title 新規記事作成
-  body
+
+block content
+  .page-header
     h1 新規記事作成
-    form(action = "/articles" method = "post")
-      p
-        input(type = "text", name = "title")
-      p
-        textarea(name = "body")
-      p
-        input(type = "submit", value = "作成")
+
+    
+  form(action = "/articles" method = "post")
+    .form-group
+      input(type = "text", name = "title")
+    .form-group
+      textarea(name = "body" form = 10)
+    .form-group
+      input.btn.btn-primary.btn-block(type = "submit", value = "作成")
