@@ -1,0 +1,14 @@
+extends layout.pug
+
+block head
+    title シャレオツを決めよう
+
+block content
+    .page-header
+     h1 見せつけたいものを、もっと気軽に。
+
+    div
+      form
+       a.btn.btn-primary(href = `/login/`) ログイン
+        a.btn.btn-success(href = `/signup/`) サインアップ
+        

@@ -16,6 +16,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 let cookieParser = require('cookie-parser');
 app.use(cookieParser());
 
+let methodOverride = require('method-override');
+app.use(methodOverride('_method'));
+
 let mysql = require('mysql');
 let db = mysql.createConnection({
     host: "localhost",
@@ -24,7 +27,16 @@ let db = mysql.createConnection({
     database: "myBlog"
 });
 db.connect();
+let mySqlPromise = require('mysql-promise');
+let dbp = mySqlPromise();
+dbp.configure({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "myBlog"
+}, mysql);
 app.locals.db = db;
+app.locals.dbp = dbp;
 
 let route = require('./route');
 route(app);

@@ -29,7 +29,7 @@ module.exports = function(app) {
                 res.redirect(302, "/login");
             }
         )
-        res.json('登録が完了しました。');
+        res.render('top');
     });
     app.get('/login', function(req, res) {
         res.render('login');
@@ -74,4 +74,8 @@ module.exports = function(app) {
             }
         );
     });
+
+    app.get("/top/", function(req, res) {
+        res.render('top');
+    })
 }
